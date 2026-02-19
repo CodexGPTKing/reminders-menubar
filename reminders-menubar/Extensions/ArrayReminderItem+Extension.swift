@@ -27,7 +27,8 @@ extension Array where Element == ReminderItem {
         undatedReminders.sort(by: {
             let firstDate = $0.reminder.completionDate ?? $0.reminder.creationDate ?? Date.distantPast
             let secondDate = $1.reminder.completionDate ?? $1.reminder.creationDate ?? Date.distantPast
-            return firstDate.compare(secondDate) == .orderedDescending
+            let comparisonResult: ComparisonResult = $0.reminder.isCompleted ? .orderedDescending : .orderedAscending
+            return firstDate.compare(secondDate) == comparisonResult
         })
         
         return dueDateReminders + undatedReminders
