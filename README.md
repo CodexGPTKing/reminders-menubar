@@ -6,9 +6,6 @@
   <h1>
     Reminders MenuBar
   </h1>
-  <p>
-    Simple macOS menu bar app to view and interact with reminders. This forked version has been tweaked so that uncompleted undated reminders now sort by creation date from oldest to newest.
-  </p>
     <p>
     This forked version has been tweaked so that uncompleted undated reminders now sort by creation date from oldest to newest.
   </p>
